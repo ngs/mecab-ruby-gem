@@ -1,0 +1,1 @@
+/opt/boxen/homebrew/include/mecab.h

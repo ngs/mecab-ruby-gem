@@ -3,6 +3,5 @@ Makefile
 MeCab.bundle
 MeCab_wrap.cpp
 MeCab_wrap.o
-mecab.h
 mkmf.log
 
