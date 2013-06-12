@@ -7,6 +7,12 @@ use_mecab_config = enable_config('mecab-config')
   have_library(lib)
 }
 
+if RUBY_PLATFORM.start_with? "x86_64-darwin"
+  dir_config('mecab',
+    `mecab-config --inc-dir`.strip,
+    `mecab-config --libs-only-L`.strip)
+end
+
 $CFLAGS += ' ' + `#{mecab_config} --cflags`.chomp
 
 have_header('mecab.h') && create_makefile('MeCab')
